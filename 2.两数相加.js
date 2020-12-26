@@ -17,7 +17,7 @@
  * @param {ListNode} l2
  * @return {ListNode}
  */
-var addTwoNumbers = function (l1, l2) {
+var addTwoNumbers = function(l1, l2) {
   let rootNode = new ListNode(0, null);
   let node = rootNode;
   let advance = 0;
