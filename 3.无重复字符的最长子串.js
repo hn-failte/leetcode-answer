@@ -27,3 +27,7 @@ var lengthOfLongestSubstring = function(s) {
   return str.length > maxLength ? str.length : maxLength;
 };
 // @lc code=end
+
+// @after-stub-for-debug-begin
+module.exports = lengthOfLongestSubstring;
+// @after-stub-for-debug-end

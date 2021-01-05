@@ -42,3 +42,7 @@ var addTwoNumbers = function(l1, l2) {
   return rootNode;
 };
 // @lc code=end
+
+// @after-stub-for-debug-begin
+module.exports = addTwoNumbers;
+// @after-stub-for-debug-end
