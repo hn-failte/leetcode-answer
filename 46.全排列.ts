@@ -6,6 +6,24 @@
 
 // @lc code=start
 function permute(nums: number[]): number[][] {
-
+    const size = nums.length
+    const list: number[][] = []
+    const vis: boolean[] = []
+    const pick = (selected: number[]) => {
+        if (selected.length === size) {
+            list.push(selected.slice())
+        } else {
+            for (let i = 0; i < size; i++) {
+                if (vis[i]) continue
+                selected.push(nums[i])
+                vis[i] = true
+                pick(selected)
+                vis[i] = false
+                selected.pop()
+            }
+        }
+    }
+    pick([])
+    return list
 };
 // @lc code=end
