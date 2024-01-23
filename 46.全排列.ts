@@ -10,17 +10,14 @@ function permute(nums: number[]): number[][] {
     const list: number[][] = []
     const vis: boolean[] = []
     const pick = (selected: number[]) => {
-        if (selected.length === size) {
-            list.push(selected.slice())
-        } else {
-            for (let i = 0; i < size; i++) {
-                if (vis[i]) continue
-                selected.push(nums[i])
-                vis[i] = true
-                pick(selected)
-                vis[i] = false
-                selected.pop()
-            }
+        if (selected.length === size) return list.push(selected.slice())
+        for (let i = 0; i < size; i++) {
+            if (vis[i]) continue
+            selected.push(nums[i])
+            vis[i] = true
+            pick(selected)
+            vis[i] = false
+            selected.pop()
         }
     }
     pick([])
